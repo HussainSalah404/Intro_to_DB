@@ -46,9 +46,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
-  order_id int DEFAULT NULL,
-  custumer_id int DEFAULT NULL,
-  order_date date DEFAULT NULL
+  order_id INT,
+  customer_id INT,
+  order_date DATE,
+  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 LOCK TABLES orders WRITE;
