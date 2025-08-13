@@ -33,8 +33,8 @@ CREATE TABLE Customers (
 LOCK TABLES customers WRITE;
 UNLOCK TABLES;
 
-DROP TABLE IF EXISTS Order_details;
-CREATE TABLE Order_details (
+DROP TABLE IF EXISTS Order_Details;
+CREATE TABLE Order_Details (
 order_id INT,
   order_date DATE,
   customer_id INT,
