@@ -7,3 +7,6 @@ mydb = mysql.connector.connect(
     password="Sona@a7a#404jusy",
     database="alx_book_store"
 )
+
+
+print("Database 'alx_book_store' created successfully!")
