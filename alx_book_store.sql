@@ -1,8 +1,8 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
-DROP TABLE IF EXISTS authors;
-CREATE TABLE authors (
+DROP TABLE IF EXISTS Authors;
+CREATE TABLE Authors (
   author_id int DEFAULT NULL,
   author_name varchar(215) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -10,8 +10,8 @@ CREATE TABLE authors (
 LOCK TABLES authors WRITE;
 UNLOCK TABLES;
 
-DROP TABLE IF EXISTS books;
-CREATE TABLE books (
+DROP TABLE IF EXISTS Books;
+CREATE TABLE Books (
   book_id int DEFAULT NULL,
   title varchar(130) DEFAULT NULL,
   author_id int DEFAULT NULL,
@@ -22,8 +22,8 @@ CREATE TABLE books (
 LOCK TABLES books WRITE;
 UNLOCK TABLES;
 
-DROP TABLE IF EXISTS customers;
-CREATE TABLE customers (
+DROP TABLE IF EXISTS Customers;
+CREATE TABLE Customers (
   customer_id int DEFAULT NULL,
   customer_name varchar(215) DEFAULT NULL,
   email varchar(215) DEFAULT NULL,
@@ -33,8 +33,8 @@ CREATE TABLE customers (
 LOCK TABLES customers WRITE;
 UNLOCK TABLES;
 
-DROP TABLE IF EXISTS order_details;
-CREATE TABLE order_details (
+DROP TABLE IF EXISTS Order_details;
+CREATE TABLE Order_details (
   orderdetailid int NOT NULL AUTO_INCREMENT,
   order_id int DEFAULT NULL,
   book_id int DEFAULT NULL,
@@ -45,8 +45,8 @@ CREATE TABLE order_details (
 LOCK TABLES order_details WRITE;
 UNLOCK TABLES;
 
-DROP TABLE IF EXISTS orders;
-CREATE TABLE orders (
+DROP TABLE IF EXISTS Orders;
+CREATE TABLE Orders (
   order_id int DEFAULT NULL,
   custumer_id int DEFAULT NULL,
   order_date date DEFAULT NULL
