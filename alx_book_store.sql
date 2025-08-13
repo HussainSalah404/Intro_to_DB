@@ -35,11 +35,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS Order_details;
 CREATE TABLE Order_details (
-  orderdetailid int NOT NULL AUTO_INCREMENT,
-  order_id int DEFAULT NULL,
-  book_id int DEFAULT NULL,
-  quantity double DEFAULT NULL,
-  PRIMARY KEY (orderdetailid)
+order_id INT,
+  order_date DATE,
+  customer_id INT,
+  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 LOCK TABLES order_details WRITE;
