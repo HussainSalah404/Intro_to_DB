@@ -24,10 +24,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS Customers;
 CREATE TABLE Customers (
-  customer_id int DEFAULT NULL,
-  customer_name varchar(215) DEFAULT NULL,
-  email varchar(215) DEFAULT NULL,
-  address text
+  customer_id INT PRIMARY KEY AUTO_INCREMENT,
+  customer_name VARCHAR(215),
+  email VARCHAR(215),
+  address TEXT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 LOCK TABLES customers WRITE;
