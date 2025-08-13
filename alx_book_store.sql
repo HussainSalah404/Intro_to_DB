@@ -46,10 +46,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
+orderdetailid INT NOT NULL AUTO_INCREMENT,
   order_id INT,
-  customer_id INT,
-  order_date DATE,
-  FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+  book_id INT,
+  quantity DOUBLE,
+  PRIMARY KEY (orderdetailid),
+  FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+  FOREIGN KEY (book_id) REFERENCES Books(book_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 LOCK TABLES orders WRITE;
